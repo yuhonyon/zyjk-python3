@@ -42,4 +42,4 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 COPY --from=builder /app/.venv /app/.venv
 COPY --from=builder /app/pyproject.toml /app/uv.lock /app/README.md ./
 
-CMD ["python", "-c", "import fastapi, sqlalchemy, asyncmy, redis, arq; print('chroni-health-deps ok')"]
+CMD ["python", "-c", "import fastapi, sqlalchemy, asyncmy, redis, arq, paho.mqtt.client, websocket; print('chroni-health-deps ok')"]
